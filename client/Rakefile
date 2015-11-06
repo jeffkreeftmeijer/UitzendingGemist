@@ -1,0 +1,15 @@
+require 'aws-sdk'
+load 'env.rb'
+
+task :update do
+  service = AWS::S3.new
+  bucket = service.buckets['atvnpo']
+
+  [
+    'js/application.js', 'js/Presenter.js', 'js/ResourceLoader.js',
+    'templates/Index.xml.js', 'templates/Episode.xml.js'
+  ].each do |path|
+    puts "Uploading #{path}..."
+    bucket.objects[path].write(File.read(path), {:acl => :public_read})
+  end
+end
