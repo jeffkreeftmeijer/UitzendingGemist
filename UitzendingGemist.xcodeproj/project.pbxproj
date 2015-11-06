@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F13A9B01BED33C10045ACE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F13A9AF1BED33C10045ACE6 /* AppDelegate.swift */; };
+		1F13A9B21BED33C10045ACE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F13A9B11BED33C10045ACE6 /* ViewController.swift */; };
+		1F13A9B51BED33C10045ACE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F13A9B31BED33C10045ACE6 /* Main.storyboard */; };
+		1F13A9B71BED33C10045ACE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F13A9B61BED33C10045ACE6 /* Assets.xcassets */; };
+		1F13A9C21BED33C10045ACE6 /* UitzendingGemistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F13A9C11BED33C10045ACE6 /* UitzendingGemistTests.swift */; };
+		1F13A9CD1BED33C10045ACE6 /* UitzendingGemistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F13A9CC1BED33C10045ACE6 /* UitzendingGemistUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F13A9BE1BED33C10045ACE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F13A9A41BED33C10045ACE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F13A9AB1BED33C10045ACE6;
+			remoteInfo = UitzendingGemist;
+		};
+		1F13A9C91BED33C10045ACE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F13A9A41BED33C10045ACE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F13A9AB1BED33C10045ACE6;
+			remoteInfo = UitzendingGemist;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F13A9AC1BED33C10045ACE6 /* UitzendingGemist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UitzendingGemist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F13A9AF1BED33C10045ACE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F13A9B11BED33C10045ACE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F13A9B41BED33C10045ACE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F13A9B61BED33C10045ACE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F13A9B81BED33C10045ACE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F13A9BD1BED33C10045ACE6 /* UitzendingGemistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UitzendingGemistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F13A9C11BED33C10045ACE6 /* UitzendingGemistTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UitzendingGemistTests.swift; sourceTree = "<group>"; };
+		1F13A9C31BED33C10045ACE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F13A9C81BED33C10045ACE6 /* UitzendingGemistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UitzendingGemistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F13A9CC1BED33C10045ACE6 /* UitzendingGemistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UitzendingGemistUITests.swift; sourceTree = "<group>"; };
+		1F13A9CE1BED33C10045ACE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F13A9A91BED33C10045ACE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F13A9BA1BED33C10045ACE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F13A9C51BED33C10045ACE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1F13A9A31BED33C10045ACE6 = {
+			isa = PBXGroup;
+			children = (
+				1F13A9AE1BED33C10045ACE6 /* UitzendingGemist */,
+				1F13A9C01BED33C10045ACE6 /* UitzendingGemistTests */,
+				1F13A9CB1BED33C10045ACE6 /* UitzendingGemistUITests */,
+				1F13A9AD1BED33C10045ACE6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F13A9AD1BED33C10045ACE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F13A9AC1BED33C10045ACE6 /* UitzendingGemist.app */,
+				1F13A9BD1BED33C10045ACE6 /* UitzendingGemistTests.xctest */,
+				1F13A9C81BED33C10045ACE6 /* UitzendingGemistUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F13A9AE1BED33C10045ACE6 /* UitzendingGemist */ = {
+			isa = PBXGroup;
+			children = (
+				1F13A9AF1BED33C10045ACE6 /* AppDelegate.swift */,
+				1F13A9B11BED33C10045ACE6 /* ViewController.swift */,
+				1F13A9B31BED33C10045ACE6 /* Main.storyboard */,
+				1F13A9B61BED33C10045ACE6 /* Assets.xcassets */,
+				1F13A9B81BED33C10045ACE6 /* Info.plist */,
+			);
+			path = UitzendingGemist;
+			sourceTree = "<group>";
+		};
+		1F13A9C01BED33C10045ACE6 /* UitzendingGemistTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F13A9C11BED33C10045ACE6 /* UitzendingGemistTests.swift */,
+				1F13A9C31BED33C10045ACE6 /* Info.plist */,
+			);
+			path = UitzendingGemistTests;
+			sourceTree = "<group>";
+		};
+		1F13A9CB1BED33C10045ACE6 /* UitzendingGemistUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1F13A9CC1BED33C10045ACE6 /* UitzendingGemistUITests.swift */,
+				1F13A9CE1BED33C10045ACE6 /* Info.plist */,
+			);
+			path = UitzendingGemistUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F13A9AB1BED33C10045ACE6 /* UitzendingGemist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F13A9D11BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemist" */;
+			buildPhases = (
+				1F13A9A81BED33C10045ACE6 /* Sources */,
+				1F13A9A91BED33C10045ACE6 /* Frameworks */,
+				1F13A9AA1BED33C10045ACE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UitzendingGemist;
+			productName = UitzendingGemist;
+			productReference = 1F13A9AC1BED33C10045ACE6 /* UitzendingGemist.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F13A9BC1BED33C10045ACE6 /* UitzendingGemistTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F13A9D41BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemistTests" */;
+			buildPhases = (
+				1F13A9B91BED33C10045ACE6 /* Sources */,
+				1F13A9BA1BED33C10045ACE6 /* Frameworks */,
+				1F13A9BB1BED33C10045ACE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F13A9BF1BED33C10045ACE6 /* PBXTargetDependency */,
+			);
+			name = UitzendingGemistTests;
+			productName = UitzendingGemistTests;
+			productReference = 1F13A9BD1BED33C10045ACE6 /* UitzendingGemistTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1F13A9C71BED33C10045ACE6 /* UitzendingGemistUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F13A9D71BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemistUITests" */;
+			buildPhases = (
+				1F13A9C41BED33C10045ACE6 /* Sources */,
+				1F13A9C51BED33C10045ACE6 /* Frameworks */,
+				1F13A9C61BED33C10045ACE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F13A9CA1BED33C10045ACE6 /* PBXTargetDependency */,
+			);
+			name = UitzendingGemistUITests;
+			productName = UitzendingGemistUITests;
+			productReference = 1F13A9C81BED33C10045ACE6 /* UitzendingGemistUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F13A9A41BED33C10045ACE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Jeff Kreeftmeijer";
+				TargetAttributes = {
+					1F13A9AB1BED33C10045ACE6 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					1F13A9BC1BED33C10045ACE6 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 1F13A9AB1BED33C10045ACE6;
+					};
+					1F13A9C71BED33C10045ACE6 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 1F13A9AB1BED33C10045ACE6;
+					};
+				};
+			};
+			buildConfigurationList = 1F13A9A71BED33C10045ACE6 /* Build configuration list for PBXProject "UitzendingGemist" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F13A9A31BED33C10045ACE6;
+			productRefGroup = 1F13A9AD1BED33C10045ACE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F13A9AB1BED33C10045ACE6 /* UitzendingGemist */,
+				1F13A9BC1BED33C10045ACE6 /* UitzendingGemistTests */,
+				1F13A9C71BED33C10045ACE6 /* UitzendingGemistUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F13A9AA1BED33C10045ACE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F13A9B71BED33C10045ACE6 /* Assets.xcassets in Resources */,
+				1F13A9B51BED33C10045ACE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F13A9BB1BED33C10045ACE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F13A9C61BED33C10045ACE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F13A9A81BED33C10045ACE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F13A9B21BED33C10045ACE6 /* ViewController.swift in Sources */,
+				1F13A9B01BED33C10045ACE6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F13A9B91BED33C10045ACE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F13A9C21BED33C10045ACE6 /* UitzendingGemistTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F13A9C41BED33C10045ACE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F13A9CD1BED33C10045ACE6 /* UitzendingGemistUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F13A9BF1BED33C10045ACE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F13A9AB1BED33C10045ACE6 /* UitzendingGemist */;
+			targetProxy = 1F13A9BE1BED33C10045ACE6 /* PBXContainerItemProxy */;
+		};
+		1F13A9CA1BED33C10045ACE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F13A9AB1BED33C10045ACE6 /* UitzendingGemist */;
+			targetProxy = 1F13A9C91BED33C10045ACE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F13A9B31BED33C10045ACE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F13A9B41BED33C10045ACE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F13A9CF1BED33C10045ACE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		1F13A9D01BED33C10045ACE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F13A9D21BED33C10045ACE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = UitzendingGemist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1F13A9D31BED33C10045ACE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = UitzendingGemist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1F13A9D51BED33C10045ACE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UitzendingGemistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UitzendingGemist.app/UitzendingGemist";
+			};
+			name = Debug;
+		};
+		1F13A9D61BED33C10045ACE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = UitzendingGemistTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemistTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UitzendingGemist.app/UitzendingGemist";
+			};
+			name = Release;
+		};
+		1F13A9D81BED33C10045ACE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UitzendingGemistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UitzendingGemist;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		1F13A9D91BED33C10045ACE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = UitzendingGemistUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemistUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = UitzendingGemist;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F13A9A71BED33C10045ACE6 /* Build configuration list for PBXProject "UitzendingGemist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F13A9CF1BED33C10045ACE6 /* Debug */,
+				1F13A9D01BED33C10045ACE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F13A9D11BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F13A9D21BED33C10045ACE6 /* Debug */,
+				1F13A9D31BED33C10045ACE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F13A9D41BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemistTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F13A9D51BED33C10045ACE6 /* Debug */,
+				1F13A9D61BED33C10045ACE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1F13A9D71BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemistUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F13A9D81BED33C10045ACE6 /* Debug */,
+				1F13A9D91BED33C10045ACE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F13A9A41BED33C10045ACE6 /* Project object */;
+}
