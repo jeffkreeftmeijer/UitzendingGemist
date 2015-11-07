@@ -6,11 +6,11 @@ function ResourceLoader(baseurl) {
   this.BASEURL = baseurl;
 }
 
-ResourceLoader.prototype.loadResource = function(resource, callback) {
+ResourceLoader.prototype.loadResource = function(resource, data, callback) {
   var self = this;
   evaluateScripts([resource], function(success) {
     if (success) {
-      var resource = Template.call(self);
+      var resource = Template.call(self, data);
       callback.call(self, resource);
     } else {
       throw ("Resource Loader Error");
