@@ -7,7 +7,8 @@ task :update do
 
   [
     'js/application.js', 'js/Presenter.js', 'js/ResourceLoader.js',
-    'templates/Index.xml.js', 'templates/Episode.xml.js'
+    'templates/Index.xml.js', 'templates/Episode.xml.js',
+    'js/uitzendinggemist.js'
   ].each do |path|
     puts "Uploading #{path}..."
     bucket.objects[path].write(File.read(path), {:acl => :public_read})
