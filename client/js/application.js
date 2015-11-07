@@ -1,10 +1,13 @@
 var resourceLoader;
 
+npoplayer = {};
+
 App.onLaunch = function(options) {
   var javascriptFiles = [
     `${options.BASEURL}js/ResourceLoader.js`,
     `${options.BASEURL}js/Presenter.js`,
     `${options.BASEURL}js/uitzendinggemist.js`,
+    'http://ida.omroep.nl/npoplayer/i.js'
   ];
 
   evaluateScripts(javascriptFiles, function(success) {

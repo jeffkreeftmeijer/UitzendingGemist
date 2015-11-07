@@ -12,34 +12,71 @@ var Presenter = {
     navigationDocument.presentModal(xml);
   },
 
+  getVideoURL: function(token, id, callback){
+    first = -1
+    last = -1
+
+    for(i=0; i<token.length;i++) {
+      if(i > 4 && i < token.length - 4){
+        if(!isNaN(token[i])) {
+          if(first < 0) {
+            first = i
+          } else if(last < 0){
+            last = i
+          }
+        }
+      }
+    }
+
+    splits = token.split('')
+    firstValue = splits[first]
+    lastValue = splits[last]
+    splits[first] = lastValue
+    splits[last] = firstValue
+
+    url = "http://ida.omroep.nl/odi/?prid=" + id + "&puboptions=adaptive&adaptive=yes&part=1&token=" + splits.join('')
+
+    UitzendingGemist.get(url, function(data){
+      stream_url = data['streams'][0].split('&')[0]
+
+      UitzendingGemist.get(stream_url, function(data){
+        callback(data['url'])
+      })
+    })
+  },
+
   load: function(event) {
     var self = this,
     element = event.target,
     templateURL = element.getAttribute("template")
-    videoURL = element.getAttribute("videoURL")
+    episodeID = element.getAttribute("episode")
 
     if (templateURL) {
       self.showLoadingIndicator();
 
-      resourceLoader.loadResource(templateURL,
-        function(resource) {
-          if (resource) {
-            var doc = self.makeDocument(resource);
-            doc.addEventListener("select", self.load.bind(self));
-            self.defaultPresenter.call(self, doc);
+      UitzendingGemist.Episode.find(episodeID, function(episode){
+        resourceLoader.loadResource(templateURL,
+          episode,
+          function(resource) {
+            if (resource) {
+              var doc = self.makeDocument(resource);
+              doc.addEventListener("select", self.load.bind(self));
+              self.defaultPresenter.call(self, doc);
+            }
           }
-        }
-      )
-    }
-
-    if (videoURL) {
+        )
+      })
+    } else if (episodeID) {
       var player = new Player();
       var playlist = new Playlist();
-      var mediaItem = new MediaItem("video", videoURL);
 
-      player.playlist = playlist;
-      player.playlist.push(mediaItem);
-      player.present();
+      self.getVideoURL(npoplayer.token, episodeID, function(url){
+        var mediaItem = new MediaItem("video", url);
+
+        player.playlist = playlist;
+        player.playlist.push(mediaItem);
+        player.present();
+      })
     }
   },
 
