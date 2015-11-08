@@ -81,7 +81,7 @@ var Presenter = {
     switch(view) {
       case "popular":
         Episode.popular(function(episodes){
-          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Index.xml.js",
+          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Popular.xml.js",
             episodes,
             function(resource) {
               if (resource) {
@@ -95,7 +95,7 @@ var Presenter = {
       break
       case "recent":
         Episode.recent(function(episodes){
-          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Index.xml.js",
+          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Recent.xml.js",
             episodes,
             function(resource) {
               if (resource) {

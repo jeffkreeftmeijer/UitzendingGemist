@@ -7,7 +7,7 @@ task :update do
 
   [
     'js/application.js', 'js/Presenter.js', 'js/ResourceLoader.js',
-    'templates/Index.xml.js', 'templates/Episode.xml.js', 'templates/MenuBar.xml.js', 'templates/Search.xml.js',
+    'templates/Popular.xml.js', 'templates/Recent.xml.js', 'templates/Episode.xml.js', 'templates/MenuBar.xml.js', 'templates/Search.xml.js',
     'js/uitzendinggemist.js', 'js/Episode.js', 'js/Series.js'
   ].each do |path|
     puts "Uploading #{path}..."
