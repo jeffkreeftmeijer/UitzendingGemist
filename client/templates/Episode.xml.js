@@ -20,7 +20,7 @@ var Template = function(episode) {
 
       output += `<lockup view="episode" episode="${episode.mid}" series="${series.mid}">
         <img src="${episode.stills ? episode.stills[0].url : episode.image}" width="308" height="174"/>
-        <title>${episode.name.replace('&', '&amp;')}</title>
+        <title>${episode.name}</title>
       </lockup>`
     }
 
@@ -31,24 +31,24 @@ var Template = function(episode) {
   <document>
     <productTemplate>
       <banner>
-        <heroImg src="${episode.stills ? episode.stills[0].url : episode.image}" />
+        <heroImg src="${episode.image}" />
         <infoList>
           <info>
           <header>
           </header>
-            <text>${episode['broadcasters'].join(', ')}</text>
-            <text>${episode['genres'].join(', ')}</text>
-            <text>${Math.round(episode['duration'] / 60)} minuten</text>
+            <text>${episode.broadcasters}</text>
+            <text>${episode.genres}</text>
+            <text>${episode.duration} minuten</text>
           </info>
         </infoList>
         <stack>
           <title>${episode.series.name}</title>
           <row>
-            <text>${episode['name']}</text>
+            <text>${episode.name}</text>
           </row>
-          <description allowsZooming="true">${episode['description']}</description>
+          <description allowsZooming="true">${episode.description}</description>
           <row>
-            <buttonLockup view="video" episode="${episode.nebo_id}">
+            <buttonLockup view="video" episode="${episode.id}">
               <badge src="resource://button-play" />
             </buttonLockup>
           </row>
