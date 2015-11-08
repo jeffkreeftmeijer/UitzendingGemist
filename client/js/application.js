@@ -39,15 +39,19 @@ var buildResults = function(doc, searchText) {
   lsInput.stringData = `<list>
     <section>
       <header>
-        <title>No Results</title>
+        <title>Geen resultaten</title>
       </header>
     </section>
   </list>`;
 
   Episode.search(searchText, function(episodes){
     if (episodes.length > 0) {
+      lsInput.stringData = `<grid>
+        <header>
+          <title>Zoekresultaten voor “` + searchText + `”</title>
+        </header>
+      <section>`;
 
-      lsInput.stringData = `<grid><section>`;
       for (var i = 0; i < episodes.length; i++) {
         episode = episodes[i]
         lsInput.stringData += `<lockup view="episode" episode="${episode.id}" series="${episode.series.id}">
