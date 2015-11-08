@@ -20,7 +20,7 @@ var Template = function(episode) {
           </row>
           <description allowsZooming="true">${episode['description']}</description>
           <row>
-            <buttonLockup episode="${episode.nebo_id}">
+            <buttonLockup view="video" episode="${episode.nebo_id}">
               <badge src="resource://button-play" />
             </buttonLockup>
           </row>

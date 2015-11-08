@@ -48,35 +48,40 @@ var Presenter = {
   load: function(event) {
     var self = this,
     element = event.target,
-    templateURL = element.getAttribute("template")
+
+    view = element.getAttribute("view")
+
     episodeID = element.getAttribute("episode")
 
-    if (templateURL) {
-      self.showLoadingIndicator();
+    switch(view) {
+      case "episode":
+        self.showLoadingIndicator();
 
-      UitzendingGemist.Episode.find(episodeID, function(episode){
-        resourceLoader.loadResource(templateURL,
-          episode,
-          function(resource) {
-            if (resource) {
-              var doc = self.makeDocument(resource);
-              doc.addEventListener("select", self.load.bind(self));
-              self.defaultPresenter.call(self, doc);
+        UitzendingGemist.Episode.find(episodeID, function(episode){
+          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Episode.xml.js",
+            episode,
+            function(resource) {
+              if (resource) {
+                var doc = self.makeDocument(resource);
+                doc.addEventListener("select", self.load.bind(self));
+                self.defaultPresenter.call(self, doc);
+              }
             }
-          }
-        )
-      })
-    } else if (episodeID) {
-      var player = new Player();
-      var playlist = new Playlist();
+          )
+        })
+      break
+      case "video":
+        var player = new Player();
+        var playlist = new Playlist();
 
-      self.getVideoURL(npoplayer.token, episodeID, function(url){
-        var mediaItem = new MediaItem("video", url);
+        self.getVideoURL(npoplayer.token, episodeID, function(url){
+          var mediaItem = new MediaItem("video", url);
 
-        player.playlist = playlist;
-        player.playlist.push(mediaItem);
-        player.present();
-      })
+          player.playlist = playlist;
+          player.playlist.push(mediaItem);
+          player.present();
+        })
+      break
     }
   },
 
