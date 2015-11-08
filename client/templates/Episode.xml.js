@@ -1,6 +1,6 @@
 var Template = function(episode) {
   function shelf(){
-    if(episode.series.episodes.length > 1) {
+    if(episode.series.episodes.length > 0) {
       return `<shelf>
       <header>
         <title>Meer “${episode.series.name}”</title>
@@ -18,8 +18,8 @@ var Template = function(episode) {
     for(i=0; i<episodes.length; i++){
       episode = episodes[i]
 
-      output += `<lockup view="episode" episode="${episode.mid}" series="${series.id}">
-        <img src="${episode.stills ? episode.stills[0].url : episode.image}" width="308" height="174"/>
+      output += `<lockup view="episode" episode="${episode.id}" series="${series.id}">
+        <img src="${episode.image}" width="308" height="174"/>
         <title>${episode.name}</title>
       </lockup>`
     }

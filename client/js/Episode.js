@@ -1,19 +1,21 @@
-var Episode = function(data){
-  this.id = data.nebo_id
+var Episode = function(data, series_data){
+  this.id = data.mid
   this.name = data.name.replace('&', '&amp;')
   this.description = data.description
   this.image = data.stills ? data.stills[0].url : data.image
   this.broadcasters = data.broadcasters.join(', ')
   this.genres = data.genres.join(', ')
   this.duration = Math.round(data.duration / 60)
-  this.series = new Series(data.series)
+  if(series_data){
+    this.series = new Series(series_data)
+  }
 }
 
 Episode.popular = function(callback) {
   UitzendingGemist.Episode.popular(function(episodes){
     callback(
       episodes.map(function(episode){
-        return new Episode(episode)
+        return new Episode(episode, episode.series)
       })
     )
   })
@@ -24,7 +26,6 @@ Episode.find = function(episode_id, series_id, callback) {
       return episode.mid == episode_id
     })[0]
 
-    episode.series = series
-    callback(new Episode(episode))
+    callback(new Episode(episode, series))
   })
 }
