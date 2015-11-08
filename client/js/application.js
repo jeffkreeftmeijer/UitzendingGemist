@@ -30,3 +30,35 @@ App.onLaunch = function(options) {
     }
   });
 }
+
+var buildResults = function(doc, searchText) {
+  var domImplementation = doc.implementation;
+  var lsParser = domImplementation.createLSParser(1, null);
+  var lsInput = domImplementation.createLSInput();
+
+  lsInput.stringData = `<list>
+    <section>
+      <header>
+        <title>No Results</title>
+      </header>
+    </section>
+  </list>`;
+
+  Episode.search(searchText, function(episodes){
+    if (episodes.length > 0) {
+
+      lsInput.stringData = `<grid><section>`;
+      for (var i = 0; i < episodes.length; i++) {
+        episode = episodes[i]
+        lsInput.stringData += `<lockup view="episode" episode="${episode.id}" series="${episode.series.id}">
+          <img src="${episode.image}" width="308" height="174"/>
+          <title>${episode.series.name}</title>
+          <subtitle>${episode.name}</subtitle>
+        </lockup>`;
+      }
+      lsInput.stringData += `</section></grid>`;
+    }
+
+    lsParser.parseWithContext(lsInput, doc.getElementsByTagName("collectionList").item(0), 2);
+  })
+}

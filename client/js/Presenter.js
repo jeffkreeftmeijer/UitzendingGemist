@@ -55,6 +55,20 @@ var Presenter = {
     }
   },
 
+  searchPresenter: function(xml, element) {
+    this.menuBarItemPresenter.call(this, xml, element);
+    var doc = xml;
+
+    var searchField = doc.getElementsByTagName("searchField").item(0);
+    var keyboard = searchField.getFeature("Keyboard");
+
+    keyboard.onTextChange = function() {
+      var searchText = keyboard.text;
+      console.log('search text changed: ' + searchText);
+      buildResults(doc, searchText);
+    }
+  },
+
   load: function(event) {
     var self = this,
     element = event.target,
@@ -92,6 +106,18 @@ var Presenter = {
             }
           )
         })
+      break
+      case "search":
+        resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Search.xml.js",
+          [],
+          function(resource) {
+            if (resource) {
+              var doc = self.makeDocument(resource);
+              doc.addEventListener("select", self.load.bind(self));
+              self.searchPresenter.call(self, doc, element);
+            }
+          }
+        )
       break
       case "episode":
         self.showLoadingIndicator();
