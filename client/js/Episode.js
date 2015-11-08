@@ -1,6 +1,6 @@
 var Episode = function(data){
   this.id = data.nebo_id
-  this.name = data.name
+  this.name = data.name.replace('&', '&amp;')
   this.description = data.description
   this.image = data.stills ? data.stills[0].url : data.image
   this.broadcasters = data.broadcasters.join(', ')
@@ -9,6 +9,15 @@ var Episode = function(data){
   this.series = data.series
 }
 
+Episode.popular = function(callback) {
+  UitzendingGemist.Episode.popular(function(episodes){
+    callback(
+      episodes.map(function(episode){
+        return new Episode(episode)
+      })
+    )
+  })
+}
 Episode.find = function(episode_id, series_id, callback) {
   UitzendingGemist.Series.find(series_id, function(series){
     episode = series.episodes.filter(function(episode){

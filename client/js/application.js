@@ -15,7 +15,7 @@ App.onLaunch = function(options) {
     if (success) {
       resourceLoader = new ResourceLoader(options.BASEURL);
 
-      UitzendingGemist.Episode.popular(function(episodes){
+      Episode.popular(function(episodes){
         var index = resourceLoader.loadResource(
           `${options.BASEURL}templates/Index.xml.js`,
           episodes,
