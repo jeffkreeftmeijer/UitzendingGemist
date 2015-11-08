@@ -15,6 +15,13 @@ var UitzendingGemist = {
         callback
       )
     },
+
+    search: function(query, callback){
+      UitzendingGemist.get(
+        "http://apps-api.uitzendinggemist.nl/episodes/search/" + encodeURIComponent(query) + ".json",
+        callback
+      )
+    },
   },
 
   Series: {

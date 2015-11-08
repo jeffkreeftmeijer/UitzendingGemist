@@ -31,6 +31,16 @@ Episode.recent = function(callback) {
   })
 }
 
+Episode.search = function(query, callback) {
+  UitzendingGemist.Episode.search(query, function(episodes){
+    callback(
+      episodes.map(function(episode){
+        return new Episode(episode, episode.series)
+      })
+    )
+  })
+}
+
 Episode.find = function(episode_id, series_id, callback) {
   UitzendingGemist.Series.find(series_id, function(series){
     episode = series.episodes.filter(function(episode){
