@@ -7,6 +7,7 @@ App.onLaunch = function(options) {
     `${options.BASEURL}js/ResourceLoader.js`,
     `${options.BASEURL}js/Presenter.js`,
     `${options.BASEURL}js/uitzendinggemist.js`,
+    `${options.BASEURL}js/Series.js`,
     `${options.BASEURL}js/Episode.js`,
     'http://ida.omroep.nl/npoplayer/i.js'
   ];
