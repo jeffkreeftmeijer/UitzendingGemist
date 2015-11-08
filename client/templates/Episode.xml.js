@@ -18,7 +18,7 @@ var Template = function(episode) {
     for(i=0; i<episodes.length; i++){
       episode = episodes[i]
 
-      output += `<lockup view="episode" episode="${episode.mid}" series="${series.mid}">
+      output += `<lockup view="episode" episode="${episode.mid}" series="${series.id}">
         <img src="${episode.stills ? episode.stills[0].url : episode.image}" width="308" height="174"/>
         <title>${episode.name}</title>
       </lockup>`
