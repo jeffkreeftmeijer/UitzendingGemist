@@ -1,4 +1,32 @@
 var Template = function(episode) {
+  function shelf(){
+    if(episode.series.episodes.length > 1) {
+      return `<shelf>
+      <header>
+        <title>Meer “${episode.series.name}”</title>
+      </header>
+      <section>
+        ` + episodeLockups(episode.series.episodes, episode.series) + `
+      </section>
+    </shelf>`
+    }
+  }
+
+  function episodeLockups(episodes, series) {
+    output = ``
+
+    for(i=0; i<episodes.length; i++){
+      episode = episodes[i]
+
+      output += `<lockup view="episode" episode="${episode.mid}" series="${series.mid}">
+        <img src="${episode.stills ? episode.stills[0].url : episode.image}" width="308" height="174"/>
+        <title>${episode.name.replace('&', '&amp;')}</title>
+      </lockup>`
+    }
+
+    return output
+  }
+
   return `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
     <productTemplate>
@@ -26,6 +54,7 @@ var Template = function(episode) {
           </row>
         </stack>
       </banner>
+      ` + shelf() + `
     </productTemplate>
   </document>`
 }
