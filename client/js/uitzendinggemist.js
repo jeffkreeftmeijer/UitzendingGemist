@@ -1,4 +1,13 @@
 var UitzendingGemist = {
+  Broadcast: {
+    recent: function(callback){
+      UitzendingGemist.get(
+        "http://apps-api.uitzendinggemist.nl/broadcasts/recent.json",
+        callback
+      )
+    },
+  },
+
   Episode: {
     popular: function(callback){
       UitzendingGemist.get(

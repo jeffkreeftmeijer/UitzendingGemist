@@ -21,6 +21,16 @@ Episode.popular = function(callback) {
   })
 }
 
+Episode.recent = function(callback) {
+  UitzendingGemist.Broadcast.recent(function(broadcasts){
+    callback(
+      broadcasts.map(function(broadcast){
+        return new Episode(broadcast.episode, broadcast.episode.series)
+      })
+    )
+  })
+}
+
 Episode.find = function(episode_id, series_id, callback) {
   UitzendingGemist.Series.find(series_id, function(series){
     episode = series.episodes.filter(function(episode){
