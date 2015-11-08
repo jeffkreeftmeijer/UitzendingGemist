@@ -20,11 +20,14 @@ Episode.popular = function(callback) {
     )
   })
 }
+
 Episode.find = function(episode_id, series_id, callback) {
   UitzendingGemist.Series.find(series_id, function(series){
     episode = series.episodes.filter(function(episode){
       return episode.mid == episode_id
     })[0]
+
+    series.episodes.splice(series.episodes.indexOf(episode), 1)
 
     callback(new Episode(episode, series))
   })
