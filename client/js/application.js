@@ -16,17 +16,15 @@ App.onLaunch = function(options) {
     if (success) {
       resourceLoader = new ResourceLoader(options.BASEURL);
 
-      Episode.popular(function(episodes){
-        var index = resourceLoader.loadResource(
-          `${options.BASEURL}templates/Index.xml.js`,
-          episodes,
-          function(resource) {
-            var doc = Presenter.makeDocument(resource);
-            doc.addEventListener("select", Presenter.load.bind(Presenter));
-            navigationDocument.pushDocument(doc);
-          }
-        );
-      })
+      resourceLoader.loadResource(
+        `${options.BASEURL}templates/MenuBar.xml.js`,
+        [],
+        function(resource) {
+          var doc = Presenter.makeDocument(resource);
+          doc.addEventListener("select", Presenter.load.bind(Presenter));
+          navigationDocument.pushDocument(doc);
+        }
+      )
     } else {
       throw ("Unable to evaluate scripts.");
     }

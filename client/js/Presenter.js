@@ -45,6 +45,16 @@ var Presenter = {
     })
   },
 
+  menuBarItemPresenter: function(xml, element) {
+    var feature = element.parentNode.getFeature("MenuBarDocument");
+    if (feature) {
+      var currentDoc = feature.getDocument(element);
+      if (!currentDoc) {
+        feature.setDocument(xml, element);
+      }
+    }
+  },
+
   load: function(event) {
     var self = this,
     element = event.target,
@@ -55,6 +65,20 @@ var Presenter = {
     seriesID = element.getAttribute("series")
 
     switch(view) {
+      case "popular":
+        Episode.popular(function(episodes){
+          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Index.xml.js",
+            episodes,
+            function(resource) {
+              if (resource) {
+                var doc = self.makeDocument(resource);
+                doc.addEventListener("select", self.load.bind(self));
+                self.menuBarItemPresenter.call(self, doc, element);
+              }
+            }
+          )
+        })
+      break
       case "episode":
         self.showLoadingIndicator();
 
