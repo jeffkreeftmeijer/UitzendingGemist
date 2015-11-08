@@ -20,9 +20,6 @@ var Template = function(episodes) {
     <stackTemplate>
       <collectionList>
         <grid>
-          <header>
-            <title>Populair</title>
-          </header>
           <section>` + episodeLockups() + `</section>
         </grid>
       </collectionList>

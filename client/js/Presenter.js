@@ -79,6 +79,20 @@ var Presenter = {
           )
         })
       break
+      case "recent":
+        Episode.recent(function(episodes){
+          resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Index.xml.js",
+            episodes,
+            function(resource) {
+              if (resource) {
+                var doc = self.makeDocument(resource);
+                doc.addEventListener("select", self.load.bind(self));
+                self.menuBarItemPresenter.call(self, doc, element);
+              }
+            }
+          )
+        })
+      break
       case "episode":
         self.showLoadingIndicator();
 

@@ -18,7 +18,7 @@ App.onLaunch = function(options) {
 
       resourceLoader.loadResource(
         `${options.BASEURL}templates/MenuBar.xml.js`,
-        [],
+        null,
         function(resource) {
           var doc = Presenter.makeDocument(resource);
           doc.addEventListener("select", Presenter.load.bind(Presenter));
