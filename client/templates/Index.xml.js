@@ -1,5 +1,5 @@
 var Template = function(episodes) {
-  function episodeLockups(baseURL){
+  function episodeLockups(){
     output = ``
 
     for(i=0; i<episodes.length; i++){
@@ -23,7 +23,7 @@ var Template = function(episodes) {
           <header>
             <title>Populair</title>
           </header>
-          <section>` + episodeLockups(this.BASEURL) + `</section>
+          <section>` + episodeLockups() + `</section>
         </grid>
       </collectionList>
     </stackTemplate>
