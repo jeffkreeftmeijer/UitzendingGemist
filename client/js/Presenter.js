@@ -52,12 +52,13 @@ var Presenter = {
     view = element.getAttribute("view")
 
     episodeID = element.getAttribute("episode")
+    seriesID = element.getAttribute("series")
 
     switch(view) {
       case "episode":
         self.showLoadingIndicator();
 
-        UitzendingGemist.Episode.find(episodeID, function(episode){
+        Episode.find(episodeID, seriesID, function(episode){
           resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Episode.xml.js",
             episode,
             function(resource) {

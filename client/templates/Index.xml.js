@@ -5,7 +5,7 @@ var Template = function(episodes) {
     for(i=0; i<episodes.length; i++){
       episode = episodes[i]
 
-      output += `<lockup view="episode" episode="${episode.nebo_id}">
+      output += `<lockup view="episode" episode="${episode.mid}" series="${episode.series.mid}">
         <img src="${episode.stills ? episode.stills[0].url : episode.image}" width="308" height="174"/>
         <title>${episode.series.name.replace('&', '&amp;')}</title>
         <subtitle>${episode.name.replace('&', '&amp;')}</subtitle>

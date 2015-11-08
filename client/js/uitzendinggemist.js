@@ -6,10 +6,12 @@ var UitzendingGemist = {
         callback
       )
     },
+  },
 
+  Series: {
     find: function(id, callback){
-      episode = UitzendingGemist.get(
-        "http://apps-api.uitzendinggemist.nl/episodes/" + id + ".json",
+      UitzendingGemist.get(
+        "http://apps-api.uitzendinggemist.nl/series/" + id + ".json",
         callback
       )
     }
