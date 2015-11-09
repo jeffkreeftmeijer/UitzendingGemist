@@ -16,7 +16,7 @@ var Template = function() {
       </style>
     </head>
     <searchTemplate>
-      <searchField>Search</searchField>
+      <searchField>Zoeken</searchField>
       <collectionList>
       </collectionList>
     </searchTemplate>
