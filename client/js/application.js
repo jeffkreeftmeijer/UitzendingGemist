@@ -31,6 +31,22 @@ App.onLaunch = function(options) {
   });
 }
 
+var createAlert = function(title, description) {
+  var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
+    <document>
+    <alertTemplate>
+      <title>${title}</title>
+      <description>${description}</description>
+    </alertTemplate>
+    </document>`
+
+  var parser = new DOMParser();
+
+  var alertDoc = parser.parseFromString(alertString, "application/xml");
+
+  return alertDoc
+}
+
 var buildResults = function(doc, searchText) {
   var domImplementation = doc.implementation;
   var lsParser = domImplementation.createLSParser(1, null);
