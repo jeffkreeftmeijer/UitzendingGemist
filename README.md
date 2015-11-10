@@ -2,6 +2,8 @@
 
 An Unofficial Apple TV app for http://UitzendingGemist.nl
 
+![Home](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/home.png)
+
 ![Recent](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/recent.png)
 
 ![Popular](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/popular.png)
