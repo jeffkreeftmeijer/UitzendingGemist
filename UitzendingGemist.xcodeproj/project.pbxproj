@@ -33,7 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1F13A9AC1BED33C10045ACE6 /* UitzendingGemist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UitzendingGemist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F13A9AC1BED33C10045ACE6 /* Uitzending Gemist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Uitzending Gemist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F13A9AF1BED33C10045ACE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F13A9B11BED33C10045ACE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1F13A9B41BED33C10045ACE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		1F13A9AD1BED33C10045ACE6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1F13A9AC1BED33C10045ACE6 /* UitzendingGemist.app */,
+				1F13A9AC1BED33C10045ACE6 /* Uitzending Gemist.app */,
 				1F13A9BD1BED33C10045ACE6 /* UitzendingGemistTests.xctest */,
 				1F13A9C81BED33C10045ACE6 /* UitzendingGemistUITests.xctest */,
 			);
@@ -139,7 +139,7 @@
 			);
 			name = UitzendingGemist;
 			productName = UitzendingGemist;
-			productReference = 1F13A9AC1BED33C10045ACE6 /* UitzendingGemist.app */;
+			productReference = 1F13A9AC1BED33C10045ACE6 /* Uitzending Gemist.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1F13A9BC1BED33C10045ACE6 /* UitzendingGemistTests */ = {
@@ -389,7 +389,7 @@
 				INFOPLIST_FILE = UitzendingGemist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Uitzending Gemist";
 			};
 			name = Debug;
 		};
@@ -401,7 +401,7 @@
 				INFOPLIST_FILE = UitzendingGemist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemist;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Uitzending Gemist";
 			};
 			name = Release;
 		};
