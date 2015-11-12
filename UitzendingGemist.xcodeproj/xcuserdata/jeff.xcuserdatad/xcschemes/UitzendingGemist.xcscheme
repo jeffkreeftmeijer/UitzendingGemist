@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1F13A9AB1BED33C10045ACE6"
-               BuildableName = "UitzendingGemist.app"
+               BuildableName = "Uitzending Gemist.app"
                BlueprintName = "UitzendingGemist"
                ReferencedContainer = "container:UitzendingGemist.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1F13A9AB1BED33C10045ACE6"
-            BuildableName = "UitzendingGemist.app"
+            BuildableName = "Uitzending Gemist.app"
             BlueprintName = "UitzendingGemist"
             ReferencedContainer = "container:UitzendingGemist.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1F13A9AB1BED33C10045ACE6"
-            BuildableName = "UitzendingGemist.app"
+            BuildableName = "Uitzending Gemist.app"
             BlueprintName = "UitzendingGemist"
             ReferencedContainer = "container:UitzendingGemist.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1F13A9AB1BED33C10045ACE6"
-            BuildableName = "UitzendingGemist.app"
+            BuildableName = "Uitzending Gemist.app"
             BlueprintName = "UitzendingGemist"
             ReferencedContainer = "container:UitzendingGemist.xcodeproj">
          </BuildableReference>
