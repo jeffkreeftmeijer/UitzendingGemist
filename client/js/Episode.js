@@ -6,6 +6,8 @@ var Episode = function(data, series_data){
   this.broadcasters = data.broadcasters.join(', ')
   this.genres = data.genres.join(', ')
   this.duration = Math.round(data.duration / 60)
+  this.date = new Date(data.broadcasted_at * 1000)
+  this.broadcasted_at = this.date.getDate() + "/" + this.date.getMonth() + "/" + this.date.getFullYear() + " " + this.date.getHours() + ":" + this.date.getMinutes()
   if(series_data){
     this.series = new Series(series_data)
   }

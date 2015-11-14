@@ -21,6 +21,7 @@ var Template = function(episode) {
       output += `<lockup view="episode" episode="${episode.id}" series="${series.id}">
         <img src="${episode.image}" width="308" height="174"/>
         <title>${episode.name}</title>
+        <subtitle>${episode.broadcasted_at}</subtitle>
       </lockup>`
     }
 
@@ -45,6 +46,7 @@ var Template = function(episode) {
           <title>${episode.series.name}</title>
           <row>
             <text>${episode.name}</text>
+            <text>${episode.broadcasted_at}</text>
           </row>
           <description allowsZooming="true">${episode.description}</description>
           <row>
