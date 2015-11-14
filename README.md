@@ -14,7 +14,36 @@ An Unofficial Apple TV app for http://UitzendingGemist.nl
 
 ## Installation
 
-After cloning the project, you should be able to build and run it on your Apple TV using XCode 7.1 without having to change anything. If you run into any issues, [let me know](https://github.com/jeffkreeftmeijer/UitzendingGemist/issues/new) so I can try to help you out and update the guide.
+You can install UitzendingGemist onto your Apple TV by sideloading it onto your device via XCode.
+
+Before you get started, make sure you have
+
+- A Mac (or OS X in a virtual machine) with [Xcode](https://itunes.apple.com/en/app/xcode/id497799835) 7.1 or higher
+- A (free) [Apple Developer account](http://developer.apple.com)
+- A USB Type C cable to connect your Apple TV to your computer
+
+Steps
+
+1. Start XCode and go to Source Control > Check Out.
+![Start XCode and go to Source Control > Check Out.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/checkout.png)
+
+2. Enter `https://github.com/jeffkreeftmeijer/UitzendingGemist.git` and click “Next”.
+![Enter `https://github.com/jeffkreeftmeijer/UitzendingGemist.git` and click “Next”.](Screenshots/Installation/checkout2.png)
+
+3. Choose for "master" and click “Download”.
+![Choose for "master" and click “Download”.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/branch.png)
+
+4. Connect your Apple TV to your computer.
+5. Click on the project “UitzendingGemist”.
+6. Change the Bundle Identifier so it's unique, e.g. by adding your name.
+![Change the Bundle Identifier so it's unique, e.g. by adding your name.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/identifier.png)
+7. If you see ”No matching provisioning profiles found”, click Fix Issue and login with your Apple ID/Developer Account.
+![If you see ”No matching provisioning profiles found”, click Fix Issue and login with your Apple ID/Developer Account.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/team.png)
+8. Select your Apple TV in the Device menu next to the play/stop button.
+![Select your Apple TV in the menu next to the play/stop button.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/device.png)
+9. Press play to install the app to your device.
+
+If you run into any issues installing the app onto your device, please open [an issue](https://github.com/jeffkreeftmeijer/UitzendingGemist/issues), so somebody can try to help you out.
 
 Once you have the app running on your device, you don't have to use XCode to update the app as most changes are done on the `client/`, which is hosted on S3 and updated when something changes in the repository.
 
