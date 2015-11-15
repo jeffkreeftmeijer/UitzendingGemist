@@ -19,7 +19,7 @@ var Template = function(episode) {
       episode = episodes[i]
 
       output += `<lockup view="episode" episode="${episode.id}" series="${series.id}">
-        <img src="${episode.image}" width="308" height="174"/>
+        <img src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" width="308" height="174"/>
         <title>${episode.name}</title>
         <subtitle>${episode.broadcasted_at}</subtitle>
       </lockup>`
@@ -32,7 +32,7 @@ var Template = function(episode) {
   <document>
     <productTemplate>
       <banner>
-        <heroImg src="${episode.image}" />
+        <heroImg src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" />
         <infoList>
           <info>
           <header>

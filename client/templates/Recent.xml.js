@@ -6,7 +6,7 @@ var Template = function(episodes) {
       episode = episodes[i]
 
       output += `<lockup view="episode" episode="${episode.id}" series="${episode.series.id}">
-        <img src="${episode.image}" width="308" height="174"/>
+        <img src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" width="308" height="174"/>
         <title>${episode.series.name}</title>
         <subtitle>${episode.name}</subtitle>
       </lockup>`

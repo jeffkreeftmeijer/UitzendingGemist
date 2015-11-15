@@ -78,7 +78,7 @@ var buildResults = function(doc, searchText) {
       for (var i = 0; i < episodes.length; i++) {
         episode = episodes[i]
         lsInput.stringData += `<lockup view="episode" episode="${episode.id}" series="${episode.series.id}">
-          <img src="${episode.image}" width="308" height="174"/>
+          <img src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" width="308" height="174"/>
           <title>${episode.series.name}</title>
           <subtitle>${episode.name}</subtitle>
         </lockup>`;
