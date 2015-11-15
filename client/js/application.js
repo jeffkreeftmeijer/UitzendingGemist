@@ -82,3 +82,7 @@ var buildResults = function(doc, searchText) {
     lsParser.parseWithContext(lsInput, doc.getElementsByTagName("collectionList").item(0), 2);
   })
 }
+
+var htmlEntities = function(string) {
+  return String(string).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
+}

@@ -1,6 +1,6 @@
 var Episode = function(data, series_data){
   this.id = data.mid
-  this.name = data.name.replace('&', '&amp;')
+  this.name = htmlEntities(data.name)
   this.description = data.description
   this.image = data.stills ? data.stills[0].url : data.image || data.series.image
   this.broadcasters = data.broadcasters.join(', ')
