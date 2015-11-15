@@ -2,7 +2,13 @@ var Episode = function(data, series_data){
   this.id = data.mid
   this.name = htmlEntities(data.name)
   this.description = data.description
-  this.image = data.stills ? data.stills[0].url : data.image || data.series.image
+  if(data.stills) {
+    this.image = data.stills[0].url
+  } else if (data.image) {
+    this.image = data.image
+  } else if (data.series) {
+    this.image = data.series.image
+  }
   this.broadcasters = data.broadcasters.join(', ')
   this.genres = data.genres.join(', ')
   this.duration = Math.round(data.duration / 60)
