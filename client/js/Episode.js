@@ -13,37 +13,37 @@ var Episode = function(data, series_data){
   }
 }
 
-Episode.popular = function(callback) {
+Episode.popular = function(callback, errorCallback) {
   UitzendingGemist.Episode.popular(function(episodes){
     callback(
       episodes.map(function(episode){
         return new Episode(episode, episode.series)
       })
     )
-  })
+  }, errorCallback)
 }
 
-Episode.recent = function(callback) {
+Episode.recent = function(callback, errorCallback) {
   UitzendingGemist.Broadcast.recent(function(broadcasts){
     callback(
       broadcasts.map(function(broadcast){
         return new Episode(broadcast.episode, broadcast.episode.series)
       })
     )
-  })
+  }, errorCallback)
 }
 
-Episode.search = function(query, callback) {
+Episode.search = function(query, callback, errorCallback) {
   UitzendingGemist.Episode.search(query, function(episodes){
     callback(
       episodes.map(function(episode){
         return new Episode(episode, episode.series)
       })
     )
-  })
+  }, errorCallback)
 }
 
-Episode.find = function(episode_id, series_id, callback) {
+Episode.find = function(episode_id, series_id, callback, errorCallback) {
   UitzendingGemist.Series.find(series_id, function(series){
     episode = series.episodes.filter(function(episode){
       return episode.mid == episode_id
@@ -52,5 +52,5 @@ Episode.find = function(episode_id, series_id, callback) {
     series.episodes.splice(series.episodes.indexOf(episode), 1)
 
     callback(new Episode(episode, series))
-  })
+  }, errorCallback)
 }

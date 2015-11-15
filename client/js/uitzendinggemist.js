@@ -1,44 +1,48 @@
 var UitzendingGemist = {
   Broadcast: {
-    recent: function(callback){
+    recent: function(callback, errorCallback){
       UitzendingGemist.get(
         "http://apps-api.uitzendinggemist.nl/broadcasts/recent.json",
-        callback
+        callback, errorCallback
       )
     },
   },
 
   Episode: {
-    popular: function(callback){
+    popular: function(callback, errorCallback){
       UitzendingGemist.get(
         "http://apps-api.uitzendinggemist.nl/episodes/popular.json",
-        callback
+        callback, errorCallback
       )
     },
 
-    search: function(query, callback){
+    search: function(query, callback, errorCallback){
       UitzendingGemist.get(
         "http://apps-api.uitzendinggemist.nl/episodes/search/" + encodeURIComponent(query) + ".json",
-        callback
+        callback, errorCallback
       )
     },
   },
 
   Series: {
-    find: function(id, callback){
+    find: function(id, callback, errorCallback){
       UitzendingGemist.get(
         "http://apps-api.uitzendinggemist.nl/series/" + id + ".json",
-        callback
+        callback, errorCallback
       )
     }
   },
 
-  get: function(url, callback){
+  get: function(url, callback, errorCallback){
     request = new XMLHttpRequest()
-    request.open("GET", url)
-    request.addEventListener("load", function(){
-      callback(JSON.parse(request.responseText))
-    })
+      request.open("GET", url)
+      request.addEventListener("load", function(){
+        try {
+          callback(JSON.parse(request.responseText))
+        } catch(error){
+          errorCallback(error)
+        }
+      })
     request.send()
   }
 }

@@ -41,8 +41,8 @@ var Presenter = {
 
       UitzendingGemist.get(stream_url, function(data){
         callback(data['url'])
-      })
-    })
+      }, showAlert)
+    }, showAlert)
   },
 
   menuBarItemPresenter: function(xml, element) {
@@ -91,7 +91,7 @@ var Presenter = {
               }
             }
           )
-        })
+        }, showAlert)
       break
       case "recent":
         Episode.recent(function(episodes){
@@ -105,7 +105,7 @@ var Presenter = {
               }
             }
           )
-        })
+        }, showAlert)
       break
       case "search":
         resourceLoader.loadResource(resourceLoader.BASEURL + "templates/Search.xml.js",
@@ -133,7 +133,7 @@ var Presenter = {
               }
             }
           )
-        })
+        }, showAlert)
       break
       case "video":
         var player = new Player();

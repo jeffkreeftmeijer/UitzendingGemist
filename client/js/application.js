@@ -31,7 +31,14 @@ App.onLaunch = function(options) {
   });
 }
 
+var showAlert = function(error) {
+  var alert = createAlert(error.name, error.message);
+  Presenter.removeLoadingIndicator();
+  navigationDocument.presentModal(alert);
+}
+
 var createAlert = function(title, description) {
+
   var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
     <document>
     <alertTemplate>
@@ -80,7 +87,7 @@ var buildResults = function(doc, searchText) {
     }
 
     lsParser.parseWithContext(lsInput, doc.getElementsByTagName("collectionList").item(0), 2);
-  })
+  }, showAlert)
 }
 
 var htmlEntities = function(string) {
