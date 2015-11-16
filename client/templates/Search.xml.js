@@ -13,6 +13,10 @@ var Template = function() {
         .suggestionListLayout {
           margin: -150 0;
         }
+
+        .marqueeOnHighlight {
+          tv-text-highlight-style: marquee-on-highlight;
+        }
       </style>
     </head>
     <searchTemplate>

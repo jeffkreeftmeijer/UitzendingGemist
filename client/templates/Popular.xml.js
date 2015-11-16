@@ -8,7 +8,7 @@ var Template = function(episodes) {
       output += `<lockup view="episode" episode="${episode.id}" series="${episode.series.id}">
         <img src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" width="308" height="174"/>
         <title>${episode.series.name}</title>
-        <subtitle>${episode.name}</subtitle>
+        <subtitle class="marqueeOnHighlight">${episode.name} – ${episode.broadcasted_at}</subtitle>
       </lockup>`
     }
 
@@ -17,6 +17,13 @@ var Template = function(episodes) {
 
   return `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
+  <head>
+    <style>
+      .marqueeOnHighlight {
+        tv-text-highlight-style: marquee-on-highlight;
+      }
+    </style>
+  </head>
     <stackTemplate>
       <collectionList>
         <grid>

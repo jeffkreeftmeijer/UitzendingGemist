@@ -20,7 +20,7 @@ var Template = function(episode) {
 
       output += `<lockup view="episode" episode="${episode.id}" series="${series.id}">
         <img src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" width="308" height="174"/>
-        <title>${episode.name}</title>
+        <title class="marqueeOnHighlight">${episode.name}</title>
         <subtitle>${episode.broadcasted_at}</subtitle>
       </lockup>`
     }
@@ -30,6 +30,13 @@ var Template = function(episode) {
 
   return `<?xml version="1.0" encoding="UTF-8" ?>
   <document>
+  <head>
+    <style>
+      .marqueeOnHighlight {
+        tv-text-highlight-style: marquee-on-highlight;
+      }
+    </style>
+  </head>
     <productTemplate>
       <banner>
         <heroImg src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" />
