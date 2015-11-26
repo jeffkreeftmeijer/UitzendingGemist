@@ -17,6 +17,12 @@ var Episode = function(data, series_data){
   if(series_data){
     this.series = new Series(series_data)
   }
+
+  if(this.name && (!this.series || this.name != this.series.name)) {
+    this.label = [this.name, this.broadcasted_at].join(' – ')
+  } else {
+    this.label = this.broadcasted_at
+  }
 }
 
 Episode.popular = function(callback, errorCallback) {

@@ -8,7 +8,7 @@ var Template = function(episodes) {
       output += `<lockup view="episode" episode="${episode.id}" series="${episode.series.id}">
         <img src="${episode.image ? episode.image : resourceLoader.BASEURL + 'images/static.gif'}" width="308" height="174"/>
         <title>${episode.series.name}</title>
-        <subtitle class="marqueeOnHighlight">${episode.name} – ${episode.broadcasted_at}</subtitle>
+        <subtitle class="marqueeOnHighlight">${episode.label}</subtitle>
       </lockup>`
     }
 
