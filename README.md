@@ -14,18 +14,18 @@ An Unofficial Apple TV app for http://UitzendingGemist.nl
 
 ## Installation
 
-You can install UitzendingGemist onto your Apple TV by sideloading it onto your device via XCode.
+You can install UitzendingGemist onto your Apple TV by sideloading it onto your device via Xcode.
 
 Before you get started, make sure you have
 
-- A Mac (or OS X in a virtual machine) with [Xcode](https://itunes.apple.com/en/app/xcode/id497799835) 7.1 or higher
+- A Mac (or a virtual machine) running OS X 10.10.5 or higher, with [Xcode](https://itunes.apple.com/en/app/xcode/id497799835) 7.1 or higher
 - A (free) [Apple Developer account](http://developer.apple.com)
 - A USB Type C cable to connect your Apple TV to your computer
 
 Steps
 
-1. Start XCode and go to Source Control > Check Out.
-![Start XCode and go to Source Control > Check Out.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/checkout.png)
+1. Start Xcode and go to Source Control > Check Out.
+![Start Xcode and go to Source Control > Check Out.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/checkout.png)
 
 2. Enter `https://github.com/jeffkreeftmeijer/UitzendingGemist.git` and click “Next”.
 ![Enter `https://github.com/jeffkreeftmeijer/UitzendingGemist.git` and click “Next”.](Screenshots/Installation/checkout2.png)
@@ -45,7 +45,7 @@ Steps
 
 If you run into any issues installing the app onto your device, please open [an issue](https://github.com/jeffkreeftmeijer/UitzendingGemist/issues), so somebody can try to help you out.
 
-Once you have the app running on your device, you don't have to use XCode to update the app as most changes are done on the `client/`, which is hosted on S3 and updated when something changes in the repository.
+Once you have the app running on your device, you don't have to use Xcode to update the app as most changes are done on the `client/`, which is hosted on S3 and updated when something changes in the repository.
 
 ## Development
 
