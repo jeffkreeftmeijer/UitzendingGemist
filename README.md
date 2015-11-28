@@ -22,8 +22,6 @@ Before you get started, make sure you have
 - A (free) [Apple Developer account](http://developer.apple.com)
 - A USB Type C cable to connect your Apple TV to your computer
 
-Steps
-
 1. Start Xcode and go to Source Control > Check Out.
 ![Start Xcode and go to Source Control > Check Out.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/checkout.png)
 
@@ -37,11 +35,11 @@ Steps
 5. Click on the project “UitzendingGemist”.
 6. Change the Bundle Identifier so it's unique, e.g. by adding your name.
 ![Change the Bundle Identifier so it's unique, e.g. by adding your name.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/identifier.png)
-7. If you see ”No matching provisioning profiles found”, click Fix Issue and login with your Apple ID/Developer Account.
-![If you see ”No matching provisioning profiles found”, click Fix Issue and login with your Apple ID/Developer Account.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/team.png)
-8. Select your Apple TV in the Device menu next to the play/stop button.
+7. If you see ”No matching provisioning profiles found”, click "Fix Issue" and sign in with your Developer Account.
+![If you see ”No matching provisioning profiles found”, click "Fix Issue" and sign in with your Developer Account.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/team.png)
+8. Select your Apple TV in the Device dropdown.
 ![Select your Apple TV in the menu next to the play/stop button.](https://raw.githubusercontent.com/jeffkreeftmeijer/UitzendingGemist/master/Screenshots/Installation/device.png)
-9. Press play to install the app to your device.
+9. Build and run to install the app on your device.
 
 If you run into any issues installing the app onto your device, please open [an issue](https://github.com/jeffkreeftmeijer/UitzendingGemist/issues), so somebody can try to help you out.
 
