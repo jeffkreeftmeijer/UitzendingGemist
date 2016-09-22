@@ -390,6 +390,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemist;
 				PRODUCT_NAME = "Uitzending Gemist";
+				SWIFT_VERSION = 2.3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -402,6 +404,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jeffkreeftmeijer.UitzendingGemist;
 				PRODUCT_NAME = "Uitzending Gemist";
+				SWIFT_VERSION = 2.3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -472,6 +476,7 @@
 				1F13A9D31BED33C10045ACE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F13A9D41BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemistTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +485,7 @@
 				1F13A9D61BED33C10045ACE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F13A9D71BED33C10045ACE6 /* Build configuration list for PBXNativeTarget "UitzendingGemistUITests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +494,7 @@
 				1F13A9D91BED33C10045ACE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
